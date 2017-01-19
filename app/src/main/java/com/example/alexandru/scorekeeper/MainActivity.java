@@ -1,5 +1,7 @@
 package com.example.alexandru.scorekeeper;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -18,6 +20,45 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         teamA = new FootBallGame();
         teamB = new FootBallGame();
+    }
+
+    public void submitReport(View view) {
+
+        String subject = "Today's football match report";
+        String text = createReport(teamA, teamB);
+        sendEmail(subject, text);
+    }
+
+    private String createReport(FootBallGame teamALocal, FootBallGame teamBLocal) {
+
+        String report = "Team name: " + "Team A"
+                + "\n" + "Goals: " + teamALocal.getTeamGoals()
+                + "\n" + "Corners: " + teamALocal.getTeamCorners()
+                + "\n" + "YellowCards: " + teamALocal.getTeamYellowCards()
+                + "\n" + "RedCards: " + teamALocal.getTeamRedCards()
+                + "\n\n" + "Team name: " + "Team B"
+                + "\n" + "Goals: " + teamBLocal.getTeamGoals()
+                + "\n" + "Corners: " + teamBLocal.getTeamCorners()
+                + "\n" + "YellowCards: " + teamBLocal.getTeamYellowCards()
+                + "\n" + "RedCards: " + teamBLocal.getTeamRedCards();
+
+
+        return report;
+    }
+
+    /**
+     * @param subject the subject of the mail
+     * @param text    the text of the mail
+     */
+    private void sendEmail(String subject, String text) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+
     }
 
     /**
@@ -124,17 +165,17 @@ public class MainActivity extends AppCompatActivity {
         Button buttonTeamA = (Button) findViewById(R.id.button_add_yellow_card_team_a);
         Button buttonTeamB = (Button) findViewById(R.id.button_add_yellow_card_team_b);
         if (buttonTeamA.isPressed()) {
-            int yellowCards = teamA.getTeamYelloCards();
+            int yellowCards = teamA.getTeamYellowCards();
             yellowCards++;
-            teamA.setTeamYelloCards(yellowCards);
-            displayYellowCard(1, teamA.getTeamYelloCards());
+            teamA.setTeamYellowCards(yellowCards);
+            displayYellowCard(1, teamA.getTeamYellowCards());
             return;
         }
         if (buttonTeamB.isPressed()) {
-            int yellowCards = teamB.getTeamYelloCards();
+            int yellowCards = teamB.getTeamYellowCards();
             yellowCards++;
-            teamB.setTeamYelloCards(yellowCards);
-            displayYellowCard(2, teamB.getTeamYelloCards());
+            teamB.setTeamYellowCards(yellowCards);
+            displayYellowCard(2, teamB.getTeamYellowCards());
             return;
         }
 

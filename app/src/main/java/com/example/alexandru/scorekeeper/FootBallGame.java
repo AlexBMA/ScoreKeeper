@@ -8,14 +8,14 @@ public class FootBallGame {
 
     private int teamGoals;
     private int teamCorners;
-    private int teamYelloCards;
+    private int teamYellowCards;
     private int teamRedCards;
 
     public FootBallGame() {
         teamGoals = 0;
         teamCorners = 0;
         teamRedCards = 0;
-        teamYelloCards = 0;
+        teamYellowCards = 0;
     }
 
     public int getTeamGoals() {
@@ -34,12 +34,12 @@ public class FootBallGame {
         this.teamCorners = teamCorners;
     }
 
-    public int getTeamYelloCards() {
-        return teamYelloCards;
+    public int getTeamYellowCards() {
+        return teamYellowCards;
     }
 
-    public void setTeamYelloCards(int teamYelloCards) {
-        this.teamYelloCards = teamYelloCards;
+    public void setTeamYellowCards(int teamYellowCards) {
+        this.teamYellowCards = teamYellowCards;
     }
 
     public int getTeamRedCards() {
