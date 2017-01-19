@@ -24,14 +24,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-
-                >
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/text_view_name_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -40,8 +37,7 @@
 
                 <TextView
                     android:id="@+id/text_view_score_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -50,8 +46,7 @@
 
                 <TextView
                     android:id="@+id/text_view_corner_term_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -60,8 +55,7 @@
 
                 <TextView
                     android:id="@+id/text_view_yellow_cards_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -70,8 +64,7 @@
 
                 <TextView
                     android:id="@+id/text_view_red_cards_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -81,8 +74,7 @@
 
                 <Button
                     android:id="@+id/button_add_goal_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addGoal"
@@ -90,8 +82,7 @@
 
                 <Button
                     android:id="@+id/button_add_corner_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addCorner"
@@ -99,8 +90,7 @@
 
                 <Button
                     android:id="@+id/button_add_yellow_card_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addYellowCard"
@@ -108,8 +98,7 @@
 
                 <Button
                     android:id="@+id/button_add_red_card_team_a"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addRedCard"
@@ -126,8 +115,7 @@
 
                 <TextView
                     android:id="@+id/text_view_name_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -136,8 +124,7 @@
 
                 <TextView
                     android:id="@+id/text_view_score_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -146,8 +133,7 @@
 
                 <TextView
                     android:id="@+id/text_view_corner_term_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -156,8 +142,7 @@
 
                 <TextView
                     android:id="@+id/text_view_yellow_cards_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -166,8 +151,7 @@
 
                 <TextView
                     android:id="@+id/text_view_red_cards_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
@@ -176,8 +160,7 @@
 
                 <Button
                     android:id="@+id/button_add_goal_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addGoal"
@@ -185,8 +168,7 @@
 
                 <Button
                     android:id="@+id/button_add_corner_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addCorner"
@@ -194,8 +176,7 @@
 
                 <Button
                     android:id="@+id/button_add_yellow_card_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addYellowCard"
@@ -203,8 +184,7 @@
 
                 <Button
                     android:id="@+id/button_add_red_card_team_b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    style="@style/BasicStyle"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
                     android:onClick="addRedCard"
@@ -218,8 +198,7 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BasicStyle"
             android:layout_alignParentBottom="true"
             android:layout_below="@id/score_board_group_view"
             android:layout_marginLeft="8dp"
