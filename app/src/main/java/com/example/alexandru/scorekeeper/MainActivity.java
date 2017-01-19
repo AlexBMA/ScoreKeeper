@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
     FootBallGame teamA;
     FootBallGame teamB;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,26 +22,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitReport(View view) {
-
-        String subject = "Today's football match report";
+        String subject = getString(R.string.email_subject_text);
         String text = createReport(teamA, teamB);
         sendEmail(subject, text);
     }
 
+    /**
+     * @param teamALocal
+     * @param teamBLocal
+     * @return the report in text form
+     */
     private String createReport(FootBallGame teamALocal, FootBallGame teamBLocal) {
-
-        String report = "Team name: " + "Team A"
-                + "\n" + "Goals: " + teamALocal.getTeamGoals()
-                + "\n" + "Corners: " + teamALocal.getTeamCorners()
-                + "\n" + "YellowCards: " + teamALocal.getTeamYellowCards()
-                + "\n" + "RedCards: " + teamALocal.getTeamRedCards()
-                + "\n\n" + "Team name: " + "Team B"
-                + "\n" + "Goals: " + teamBLocal.getTeamGoals()
-                + "\n" + "Corners: " + teamBLocal.getTeamCorners()
-                + "\n" + "YellowCards: " + teamBLocal.getTeamYellowCards()
-                + "\n" + "RedCards: " + teamBLocal.getTeamRedCards();
-
-
+        String report = getString(R.string.team_name_word) + getString(R.string.team_a_name)
+                + "\n" + getString(R.string.goals_word) + teamALocal.getTeamGoals()
+                + "\n" + getString(R.string.corners_word) + teamALocal.getTeamCorners()
+                + "\n" + getString(R.string.yellow_cards_word) + teamALocal.getTeamYellowCards()
+                + "\n" + getString(R.string.red_cards_word) + teamALocal.getTeamRedCards()
+                + "\n\n" + getString(R.string.team_name_word) + getString(R.string.team_b_name)
+                + "\n" + getString(R.string.goals_word) + teamBLocal.getTeamGoals()
+                + "\n" + getString(R.string.corners_word) + teamBLocal.getTeamCorners()
+                + "\n" + getString(R.string.yellow_cards_word) + teamBLocal.getTeamYellowCards()
+                + "\n" + getString(R.string.red_cards_word) + teamBLocal.getTeamRedCards();
         return report;
     }
 
@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
-
     }
 
     /**
@@ -79,20 +78,16 @@ public class MainActivity extends AppCompatActivity {
         Button buttonTeamA = (Button) findViewById(R.id.button_add_goal_team_a);
         Button buttonTeamB = (Button) findViewById(R.id.button_add_goal_team_b);
         if (buttonTeamA.isPressed()) {
-
             int goals = teamA.getTeamGoals();
             goals++;
             teamA.setTeamGoals(goals);
-
             displayScore(1, teamA.getTeamGoals());
-            return;
         }
         if (buttonTeamB.isPressed()) {
             int goals = teamB.getTeamGoals();
             goals++;
             teamB.setTeamGoals(goals);
             displayScore(2, teamB.getTeamGoals());
-            return;
         }
     }
 
@@ -106,12 +101,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamNumber == 1) {
             TextView scoreTeamA = (TextView) findViewById(R.id.text_view_score_team_a);
             scoreTeamA.setText("Goals: " + numberOfGoals);
-            return;
         }
         if (teamNumber == 2) {
             TextView scoreTeamB = (TextView) findViewById(R.id.text_view_score_team_b);
             scoreTeamB.setText("Goals: " + numberOfGoals);
-            return;
         }
     }
 
@@ -128,14 +121,12 @@ public class MainActivity extends AppCompatActivity {
             corners++;
             teamA.setTeamCorners(corners);
             displayCorner(1, teamA.getTeamCorners());
-            return;
         }
         if (buttonTeamB.isPressed()) {
             int corners = teamB.getTeamCorners();
             corners++;
             teamB.setTeamCorners(corners);
             displayCorner(2, teamB.getTeamCorners());
-            return;
         }
     }
 
@@ -147,12 +138,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamNumber == 1) {
             TextView scoreTeamA = (TextView) findViewById(R.id.text_view_corner_term_a);
             scoreTeamA.setText("Corners: " + numberOfCorners);
-            return;
         }
         if (teamNumber == 2) {
             TextView scoreTeamB = (TextView) findViewById(R.id.text_view_corner_term_b);
             scoreTeamB.setText("Corners: " + numberOfCorners);
-            return;
         }
     }
 
@@ -169,14 +158,12 @@ public class MainActivity extends AppCompatActivity {
             yellowCards++;
             teamA.setTeamYellowCards(yellowCards);
             displayYellowCard(1, teamA.getTeamYellowCards());
-            return;
         }
         if (buttonTeamB.isPressed()) {
             int yellowCards = teamB.getTeamYellowCards();
             yellowCards++;
             teamB.setTeamYellowCards(yellowCards);
             displayYellowCard(2, teamB.getTeamYellowCards());
-            return;
         }
 
     }
@@ -189,12 +176,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamNumber == 1) {
             TextView yellowCards = (TextView) findViewById(R.id.text_view_yellow_cards_team_a);
             yellowCards.setText("Yellow cards: " + numberOfCards);
-            return;
         }
         if (teamNumber == 2) {
             TextView yellowCards = (TextView) findViewById(R.id.text_view_yellow_cards_team_b);
             yellowCards.setText("Yellow cards: " + numberOfCards);
-            return;
         }
     }
 
@@ -213,14 +198,12 @@ public class MainActivity extends AppCompatActivity {
             redCards++;
             teamA.setTeamRedCards(redCards);
             displayRedCard(1, teamA.getTeamRedCards());
-            return;
         }
         if (buttonTeamB.isPressed()) {
             int redCards = teamB.getTeamRedCards();
             redCards++;
             teamB.setTeamRedCards(redCards);
             displayRedCard(2, teamB.getTeamRedCards());
-            return;
         }
     }
 
@@ -232,12 +215,10 @@ public class MainActivity extends AppCompatActivity {
         if (teamNumber == 1) {
             TextView redCards = (TextView) findViewById(R.id.text_view_red_cards_team_a);
             redCards.setText("Red cards:" + numberOfCards);
-            return;
         }
         if (teamNumber == 2) {
             TextView redCards = (TextView) findViewById(R.id.text_view_red_cards_team_b);
             redCards.setText("Red cards:" + numberOfCards);
-            return;
         }
     }
 }

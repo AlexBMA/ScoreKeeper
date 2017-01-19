@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">Score Keeper</string>
+
+    <!-- The name of the 2 teams -->
+    <string name="team_a_name">Team A</string>
+    <string name="team_b_name">Team B</string>
+
+    <!--Text for the 4 TextViews that display information -->
+    <string name="team_starting_goals">Goals: 0</string>
+    <string name="team_starting_corner_number">Corners: 0</string>
+    <string name="team_starting_yellow_card_number">Yellow cards: 0</string>
+    <string name="team_starting_red_card_number">Red cards: 0</string>
+
+    <!--Text for the 4 buttons that are used  -->
+    <string name="button_add_goal">Add Goal</string>
+    <string name="button_add_corner">Add Corner</string>
+    <string name="button_add_yellow_card">Add Yellow Card</string>
+    <string name="button_add_red_card">Add Red Card</string>
+
+    <!-- Text for the reset button and the send email button -->
+    <string name="button_reset">Reset</string>
+    <string name="button_send_email">Send Email</string>
+
+
+    <!-- Text used for the email subject -->
+    <string name="email_subject_text">Football match report</string>
+
+    <!-- Text used when the email text is made -->
+    <string name="team_name_word">Team name: </string>
+    <string name="goals_word">Goals: </string>
+    <string name="corners_word">Corners: </string>
+    <string name="yellow_cards_word">Yellow cards: </string>
+    <string name="red_cards_word">Red cards: </string>
+
+
 </resources>
