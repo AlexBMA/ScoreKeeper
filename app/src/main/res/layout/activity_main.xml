@@ -29,7 +29,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/id_name_team_a"
+                    android:id="@+id/text_view_name_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -39,7 +39,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/id_score_team_a"
+                    android:id="@+id/text_view_score_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -49,7 +49,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/id_corner_term_a"
+                    android:id="@+id/text_view_corner_term_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -59,7 +59,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/id_yellow_cards_team_a"
+                    android:id="@+id/text_view_yellow_cards_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -69,7 +69,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/id_red_cards_team_a"
+                    android:id="@+id/text_view_red_cards_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -80,7 +80,7 @@
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/id_button_add_goal_team_a"
+                    android:id="@+id/button_add_goal_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -89,31 +89,31 @@
                     android:text="Add goal" />
 
                 <Button
-                    android:id="@+id/id_button_add_corner_team_a"
+                    android:id="@+id/button_add_corner_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add corner"
-                    android:onClick="addCorner"/>
+                    android:onClick="addCorner"
+                    android:text="Add corner" />
 
                 <Button
-                    android:id="@+id/id_button_add_yellow_card_team_a"
+                    android:id="@+id/button_add_yellow_card_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add yellow card"
-                    android:onClick="addYellowCard"/>
+                    android:onClick="addYellowCard"
+                    android:text="Add yellow card" />
 
                 <Button
-                    android:id="@+id/id_button_add_red_card_team_a"
+                    android:id="@+id/button_add_red_card_team_a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add red card"
-                    android:onClick="addRedCard"/>
+                    android:onClick="addRedCard"
+                    android:text="Add red card" />
 
 
             </LinearLayout>
@@ -127,7 +127,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/id_name_team_b"
+                    android:id="@+id/text_view_name_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -137,7 +137,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/id_score_team_b"
+                    android:id="@+id/text_view_score_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -147,7 +147,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/id_corner_term_b"
+                    android:id="@+id/text_view_corner_term_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -157,7 +157,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/id_yellow_cards_team_b"
+                    android:id="@+id/text_view_yellow_cards_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -167,7 +167,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/id_red_cards_team_b"
+                    android:id="@+id/text_view_red_cards_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -177,7 +177,7 @@
                     android:textSize="16sp" />
 
                 <Button
-                    android:id="@+id/id_button_add_goal_team_b"
+                    android:id="@+id/button_add_goal_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
@@ -187,31 +187,31 @@
                     />
 
                 <Button
-                    android:id="@+id/id_button_add_corner_team_b"
+                    android:id="@+id/button_add_corner_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add corner"
-                    android:onClick="addCorner"/>
+                    android:onClick="addCorner"
+                    android:text="Add corner" />
 
                 <Button
-                    android:id="@+id/id_button_add_yellow_card_team_b"
+                    android:id="@+id/button_add_yellow_card_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add yellow card"
-                    android:onClick="addYellowCard"/>
+                    android:onClick="addYellowCard"
+                    android:text="Add yellow card" />
 
                 <Button
-                    android:id="@+id/id_button_add_red_card_team_b"
+                    android:id="@+id/button_add_red_card_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add red card"
-                    android:onClick="addRedCard"/>
+                    android:onClick="addRedCard"
+                    android:text="Add red card" />
 
 
             </LinearLayout>
