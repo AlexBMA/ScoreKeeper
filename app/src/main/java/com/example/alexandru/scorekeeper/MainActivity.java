@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /**
+    /** Displays the score in the TextBox
      * @param teamNumber    1 is for team A, 2 is for team B
      * @param numberOfGoals the number of goals that will be displayed
      */
@@ -82,7 +82,37 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void addCorner(View view) {
-        teamACorner++;
+        Button buttonTeamA = (Button) findViewById(R.id.id_button_add_corner_team_a);
+        Button buttonTeamB = (Button) findViewById(R.id.id_button_add_corner_team_b);
+        if (buttonTeamA.isPressed()) {
+            teamACorner++;
+            displayCorner(1,teamACorner);
+            return;
+        }
+        if (buttonTeamB.isPressed()) {
+            teamBCorner++;
+            displayCorner(2,teamBCorner);
+            return;
+        }
+    }
+
+    /**
+     *
+     * @param teamNumber   1 is for team A, 2 is for team B
+     * @param numberOfCorners the number of corners that will be displayed
+     */
+    public void displayCorner(int teamNumber, int numberOfCorners)
+    {
+        if (teamNumber == 1) {
+            TextView scoreTeamA = (TextView) findViewById(R.id.id_score_team_a);
+            scoreTeamA.setText("Corners " + numberOfCorners);
+            return;
+        }
+        if (teamNumber == 2) {
+            TextView scoreTeamB = (TextView) findViewById(R.id.id_score_team_b);
+            scoreTeamB.setText("Corners " + numberOfCorners);
+            return;
+        }
     }
 
     public void addYellowCard(View view) {

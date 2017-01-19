@@ -75,10 +75,9 @@
                     android:layout_marginBottom="16dp"
                     android:layout_marginLeft="8dp"
                     android:gravity="center_horizontal"
-                    android:text="Red cards: 0"
-                    android:textSize="16sp"
                     android:onClick="addGoal"
-                    />
+                    android:text="Red cards: 0"
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/id_button_add_goal_team_a"
@@ -86,8 +85,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add goal"
-                    android:onClick="addGoal"/>
+                    android:onClick="addGoal"
+                    android:text="Add goal" />
 
                 <Button
                     android:id="@+id/id_button_add_corner_team_a"
@@ -95,7 +94,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add corner" />
+                    android:text="Add corner"
+                    android:onClick="addCorner"/>
 
                 <Button
                     android:id="@+id/id_button_add_yellow_card_team_a"
@@ -103,7 +103,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add yellow card" />
+                    android:text="Add yellow card"
+                    android:onClick="addYellowCard"/>
 
                 <Button
                     android:id="@+id/id_button_add_red_card_team_a"
@@ -111,7 +112,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add red card" />
+                    android:text="Add red card"
+                    android:onClick="addRedCard"/>
 
 
             </LinearLayout>
@@ -180,29 +182,36 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
+                    android:onClick="addGoal"
                     android:text="Add goal"
-                    android:onClick="addGoal"/>
+                    />
 
                 <Button
+                    android:id="@+id/id_button_add_corner_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add corner" />
+                    android:text="Add corner"
+                    android:onClick="addCorner"/>
 
                 <Button
+                    android:id="@+id/id_button_add_yellow_card_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add yellow card" />
+                    android:text="Add yellow card"
+                    android:onClick="addYellowCard"/>
 
                 <Button
+                    android:id="@+id/id_button_add_red_card_team_b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="8dp"
-                    android:text="Add red card" />
+                    android:text="Add red card"
+                    android:onClick="addRedCard"/>
 
 
             </LinearLayout>
@@ -230,8 +239,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Reset"
-                android:onClick="reset"/>
+                android:onClick="reset"
+                android:text="Reset" />
 
         </LinearLayout>
 
