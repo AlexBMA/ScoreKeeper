@@ -8,20 +8,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int teamAScore = 0;
-    int teamACorner = 0;
-    int teamAYellowCards = 0;
-    int teamARedCards = 0;
-    int teamBScore = 0;
-    int teamBCorner = 0;
-    int teamBYellowCards = 0;
-    int teamBRedCards = 0;
+    FootBallGame teamA;
+    FootBallGame teamB;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        teamA = new FootBallGame();
+        teamB = new FootBallGame();
     }
 
     /**
@@ -29,14 +25,10 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view
      */
-
     public void reset(View view) {
-        teamBScore = teamAScore = 0;
-        teamBCorner = teamACorner = 0;
-        teamBRedCards = teamARedCards = 0;
-        teamAYellowCards = teamBYellowCards = 0;
+        teamA = new FootBallGame();
+        teamB = new FootBallGame();
     }
-
 
     /**
      * Adds a goal to the score
@@ -46,13 +38,19 @@ public class MainActivity extends AppCompatActivity {
         Button buttonTeamA = (Button) findViewById(R.id.button_add_goal_team_a);
         Button buttonTeamB = (Button) findViewById(R.id.button_add_goal_team_b);
         if (buttonTeamA.isPressed()) {
-            teamAScore++;
-            displayScore(1, teamAScore);
+
+            int goals = teamA.getTeamGoals();
+            goals++;
+            teamA.setTeamGoals(goals);
+
+            displayScore(1, teamA.getTeamGoals());
             return;
         }
         if (buttonTeamB.isPressed()) {
-            teamBScore++;
-            displayScore(2, teamBScore);
+            int goals = teamB.getTeamGoals();
+            goals++;
+            teamB.setTeamGoals(goals);
+            displayScore(2, teamB.getTeamGoals());
             return;
         }
     }
@@ -76,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     /**
      * Adds a corner kick
      *
@@ -86,13 +83,17 @@ public class MainActivity extends AppCompatActivity {
         Button buttonTeamA = (Button) findViewById(R.id.button_add_corner_team_a);
         Button buttonTeamB = (Button) findViewById(R.id.button_add_corner_team_b);
         if (buttonTeamA.isPressed()) {
-            teamACorner++;
-            displayCorner(1, teamACorner);
+            int corners = teamA.getTeamCorners();
+            corners++;
+            teamA.setTeamCorners(corners);
+            displayCorner(1, teamA.getTeamCorners());
             return;
         }
         if (buttonTeamB.isPressed()) {
-            teamBCorner++;
-            displayCorner(2, teamBCorner);
+            int corners = teamB.getTeamCorners();
+            corners++;
+            teamB.setTeamCorners(corners);
+            displayCorner(2, teamB.getTeamCorners());
             return;
         }
     }
@@ -104,12 +105,12 @@ public class MainActivity extends AppCompatActivity {
     public void displayCorner(int teamNumber, int numberOfCorners) {
         if (teamNumber == 1) {
             TextView scoreTeamA = (TextView) findViewById(R.id.text_view_corner_term_a);
-            scoreTeamA.setText("Corners " + numberOfCorners);
+            scoreTeamA.setText("Corners: " + numberOfCorners);
             return;
         }
         if (teamNumber == 2) {
             TextView scoreTeamB = (TextView) findViewById(R.id.text_view_corner_term_b);
-            scoreTeamB.setText("Corners " + numberOfCorners);
+            scoreTeamB.setText("Corners: " + numberOfCorners);
             return;
         }
     }
@@ -119,23 +120,25 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view
      */
-
     public void addYellowCard(View view) {
         Button buttonTeamA = (Button) findViewById(R.id.button_add_yellow_card_team_a);
         Button buttonTeamB = (Button) findViewById(R.id.button_add_yellow_card_team_b);
         if (buttonTeamA.isPressed()) {
-            teamAYellowCards++;
-            displayYellowCard(1, teamAYellowCards);
+            int yellowCards = teamA.getTeamYelloCards();
+            yellowCards++;
+            teamA.setTeamYelloCards(yellowCards);
+            displayYellowCard(1, teamA.getTeamYelloCards());
             return;
         }
         if (buttonTeamB.isPressed()) {
-            teamBYellowCards++;
-            displayYellowCard(2, teamBYellowCards);
+            int yellowCards = teamB.getTeamYelloCards();
+            yellowCards++;
+            teamB.setTeamYelloCards(yellowCards);
+            displayYellowCard(2, teamB.getTeamYelloCards());
             return;
         }
 
     }
-
 
     /**
      * @param teamNumber    1 is for team A, 2 is for team B
@@ -165,13 +168,17 @@ public class MainActivity extends AppCompatActivity {
         Button buttonTeamA = (Button) findViewById(R.id.button_add_red_card_team_a);
         Button buttonTeamB = (Button) findViewById(R.id.button_add_red_card_team_b);
         if (buttonTeamA.isPressed()) {
-            teamARedCards++;
-            displayRedCard(1, teamARedCards);
+            int redCards = teamA.getTeamRedCards();
+            redCards++;
+            teamA.setTeamRedCards(redCards);
+            displayRedCard(1, teamA.getTeamRedCards());
             return;
         }
         if (buttonTeamB.isPressed()) {
-            teamBRedCards++;
-            displayRedCard(2, teamBRedCards);
+            int redCards = teamB.getTeamRedCards();
+            redCards++;
+            teamB.setTeamRedCards(redCards);
+            displayRedCard(2, teamB.getTeamRedCards());
             return;
         }
     }
@@ -180,7 +187,6 @@ public class MainActivity extends AppCompatActivity {
      * @param teamNumber    1 is for team A, 2 is for team B
      * @param numberOfCards the number of cards that will be displayed
      */
-
     public void displayRedCard(int teamNumber, int numberOfCards) {
         if (teamNumber == 1) {
             TextView redCards = (TextView) findViewById(R.id.text_view_red_cards_team_a);
